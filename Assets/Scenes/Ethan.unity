@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 58ce714560d21d34d8011ca44f868d07, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.4
+      value: 13.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 58ce714560d21d34d8011ca44f868d07, type: 3}
       propertyPath: m_LocalPosition.y
@@ -192,6 +192,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ce714560d21d34d8011ca44f868d07, type: 3}
+--- !u!1 &91740554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 91740555}
+  m_Layer: 0
+  m_Name: RayPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &91740555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91740554}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -356.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 410087041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &263813374
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +617,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 91740555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 59.726, y: -30, z: 0}
 --- !u!114 &410087042
@@ -1352,6 +1384,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1911156535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1392670911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1392670912}
+  m_Layer: 0
+  m_Name: Shadow Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1392670912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392670911}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1486985203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,6 +1426,7 @@ GameObject:
   - component: {fileID: 1486985204}
   - component: {fileID: 1486985206}
   - component: {fileID: 1486985205}
+  - component: {fileID: 1486985207}
   m_Layer: 6
   m_Name: XR Rig
   m_TagString: Player
@@ -1379,7 +1443,7 @@ Transform:
   m_GameObject: {fileID: 1486985203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.29, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1431,6 +1495,24 @@ MonoBehaviour:
   moveStick: 4
   rotStick: 5
   body: {fileID: 892349860}
+--- !u!114 &1486985207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486985203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccb2f75ec2967a4eaaadfcb18fc7a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerOverheatLogic
+  targetObject: {fileID: 91740555}
+  overheatRate: 10
+  maxOverheat: 100
+  rayDistance: 400
+  overheat: 0
+  isObserved: 0
 --- !u!1 &1510115005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,3 +1916,4 @@ SceneRoots:
   - {fileID: 44807880}
   - {fileID: 264988679162395797}
   - {fileID: 413407421}
+  - {fileID: 1392670912}
