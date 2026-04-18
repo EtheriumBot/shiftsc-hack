@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 511e7ee0ca7715f46822b4540aaa03d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 82.9726
+      value: -9.932273
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 511e7ee0ca7715f46822b4540aaa03d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.29
+      value: 2.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 511e7ee0ca7715f46822b4540aaa03d6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 121.62259
+      value: 75.70319
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 511e7ee0ca7715f46822b4540aaa03d6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55,5 +55,53 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 511e7ee0ca7715f46822b4540aaa03d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8610200043072090695}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 511e7ee0ca7715f46822b4540aaa03d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6684267949103079421}
   m_SourcePrefab: {fileID: 100100000, guid: 511e7ee0ca7715f46822b4540aaa03d6, type: 3}
+--- !u!1 &6614907441308112097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 511e7ee0ca7715f46822b4540aaa03d6, type: 3}
+  m_PrefabInstance: {fileID: 6272870605474703792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8610200043072090695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614907441308112097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4050799653497047922b87f1b2337c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestIcon
+  rotationSpeed: 50
+  floatAmplitude: 0.5
+  floatFrequency: 1
+  particleEffectPrefab: {fileID: 4101287792768318417, guid: 185fc8fa0ec3e4045bc0b96d777d4645, type: 3}
+--- !u!65 &6684267949103079421
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614907441308112097}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9999998, y: 0.5133335, z: 3.152997}
+  m_Center: {x: -0.02885732, y: 0.08848768, z: -0.64465576}
