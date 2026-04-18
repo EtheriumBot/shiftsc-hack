@@ -6,7 +6,7 @@ public class PlayerOverheatLogic : MonoBehaviour
     [Header("Settings")]
     public Transform targetObject;
     // The object that causes overheating
-    public float overheatRate = 10f;    // How fast it goes up per second
+    public float overheatRate = 5f;    // How fast it goes up per second
     public float maxOverheat = 100f;
     public float rayDistance = 800f;
 
