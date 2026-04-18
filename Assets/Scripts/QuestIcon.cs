@@ -21,7 +21,7 @@ public class QuestIcon : MonoBehaviour
     void Update()
     {
         // 1. Rotation
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
 
         // 2. Hovering (Sine wave movement)
         float newY = startPosition.y + Mathf.Sin(Time.time * floatFrequency) * floatAmplitude;
@@ -30,8 +30,8 @@ public class QuestIcon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the object entering the trigger is the Player
-        if (other.CompareTag("Player"))
+        // Check if the other object's layer is "Player"
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             CollectQuest();
         }
