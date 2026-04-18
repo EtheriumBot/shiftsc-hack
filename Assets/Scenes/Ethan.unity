@@ -141,11 +141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 58ce714560d21d34d8011ca44f868d07, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.22
+      value: 21.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 58ce714560d21d34d8011ca44f868d07, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5900013
+      value: -0.08999866
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 58ce714560d21d34d8011ca44f868d07, type: 3}
       propertyPath: m_LocalPosition.z
@@ -647,11 +647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42111d3e0a7d1b44eabdcecc7388a015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkyboxController
-  thicknessIncrease: 0.1
-  maxThickness: 2
-  minThickness: 0.67
-  isIncreasing: 1
-  skyboxMat: {fileID: 0}
 --- !u!4 &413407421
 Transform:
   m_ObjectHideFlags: 0
@@ -681,7 +676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909236639248215274, guid: e5f51c1eeab4cd14a84e6070ced55953, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.7913857
+      value: 5.2
       objectReference: {fileID: 0}
     - target: {fileID: 4909236639248215274, guid: e5f51c1eeab4cd14a84e6070ced55953, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1038,7 +1033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7856451877520161008, guid: d6c505ec1dce1c2439bd5ca911a0a309, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.26
       objectReference: {fileID: 0}
     - target: {fileID: 7856451877520161008, guid: d6c505ec1dce1c2439bd5ca911a0a309, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1275,11 +1270,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f422f3dfa1ab2da41b5a3f542ed5b575, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.52
+      value: -48.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f422f3dfa1ab2da41b5a3f542ed5b575, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.59
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f422f3dfa1ab2da41b5a3f542ed5b575, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1728,7 +1723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7856451877520161008, guid: d6c505ec1dce1c2439bd5ca911a0a309, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.26
       objectReference: {fileID: 0}
     - target: {fileID: 7856451877520161008, guid: d6c505ec1dce1c2439bd5ca911a0a309, type: 3}
       propertyPath: m_LocalPosition.z
