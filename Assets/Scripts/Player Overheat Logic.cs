@@ -48,14 +48,14 @@ public class PlayerOverheatLogic : MonoBehaviour
 
      
     }
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         if (targetObject != null)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, targetObject.position);
         }
-    }
+    }*/
 
     void HandleOverheatLogic()
     {
