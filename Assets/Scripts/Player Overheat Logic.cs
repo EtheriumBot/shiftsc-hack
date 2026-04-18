@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerOverheatLogic : MonoBehaviour
@@ -7,11 +8,15 @@ public class PlayerOverheatLogic : MonoBehaviour
     // The object that causes overheating
     public float overheatRate = 10f;    // How fast it goes up per second
     public float maxOverheat = 100f;
-    public float rayDistance = 400f;
+    public float rayDistance = 800f;
 
     [Header("Status")]
     public float overheat = 0f;
     public bool isObserved = false;
+
+    [Header("Floating HUD Text")]
+    public TextMeshPro outText;
+
 
     void Update()
     {
@@ -21,41 +26,36 @@ public class PlayerOverheatLogic : MonoBehaviour
         
     }
 
+    void FixedUpdate()
+    {
+        // Update the text with the current overheat value
+        outText.text = $"Overheat: {overheat:F1}%";
+
+    }
     void CheckVisibility()
     {
-        if (targetObject == null) return;
-
-        // Calculate direction from player to target
-        Vector3 direction = targetObject.position - transform.position;
-        RaycastHit hit;
-
-        // Cast the ray
-        if (Physics.Raycast(transform.position, direction, out hit, rayDistance))
+        if (targetObject == null)
         {
-            print(hit.transform.name);
-
-            // Check if the object we hit is the target
-            if (hit.transform.tag == "Player")
-            {
-                isObserved = true;
-                return;
-            }
-            else
-            {
-                isObserved = false;
-            }
+            isObserved = false;
+            return;
         }
 
-     
+        Vector3 origin = transform.position + Vector3.up * 1.5f;
+        Vector3 direction = (targetObject.position - origin).normalized;
+        float distance = Vector3.Distance(origin, targetObject.position);
+
+        // If something blocks the ray before reaching the light, you're in shadow
+        isObserved = !Physics.Raycast(origin, direction, distance);
     }
-    /*private void OnDrawGizmos()
+
+    private void OnDrawGizmos()
     {
         if (targetObject != null)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, targetObject.position);
         }
-    }*/
+    }
 
     void HandleOverheatLogic()
     {

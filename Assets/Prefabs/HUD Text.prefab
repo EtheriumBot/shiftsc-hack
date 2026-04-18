@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3377656244870686411}
   - component: {fileID: 2960394739790247100}
   - component: {fileID: 7849087221114843029}
+  - component: {fileID: 2445503217918186200}
   m_Layer: 0
   m_Name: HUD Text
   m_TagString: Untagged
@@ -181,3 +182,16 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2960394739790247100}
   m_maskType: 0
+--- !u!114 &2445503217918186200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8041697248249026549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0cc97ac2566f1c4291000aac4c3dc42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingHUD
+  scoreTarget: {fileID: 0}
