@@ -7,16 +7,28 @@ public class GodPlane : MonoBehaviour
     public string playerTag = "Player";
 
     private bool roundComplete = false;
+    private int questsCollected = 0;
+    private int initialQuestCount = 0;
+
+    void Start()
+    {
+        initialQuestCount = GameObject.FindGameObjectsWithTag("Quests").Length;
+    }
 
     void Update()
     {
         if (roundComplete) return;
 
-        int remaining = GameObject.FindGameObjectsWithTag("Quests").Length;
+        int current = GameObject.FindGameObjectsWithTag("Quests").Length;
+        int previous = initialQuestCount - questsCollected;
 
-        Debug.Log("GodPlane: Quests remaining — " + remaining);
+        if (current < previous)
+        {
+            questsCollected += previous - current;
+            Debug.Log("GodPlane: Quests collected — " + questsCollected + " / 3, Remaining — " + (3 - questsCollected));
+        }
 
-        if (remaining == 0)
+        if (questsCollected >= 3)
             CompleteRound();
     }
 
