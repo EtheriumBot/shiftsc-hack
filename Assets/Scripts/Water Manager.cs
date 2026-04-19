@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class WaterManager : MonoBehaviour
@@ -5,10 +6,21 @@ public class WaterManager : MonoBehaviour
 
     public float waterLevel = 100f; // The current height of the water
 
+
+    [Header("Floating HUD Text")]
+    public TextMeshPro outText;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
+    }
+    void FixedUpdate()
+    {
+        // Update the text with the current water level
+        outText.text = $"Water Level: {waterLevel:F1}%";
+
     }
 
     // Update is called once per frame
