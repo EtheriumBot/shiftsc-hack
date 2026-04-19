@@ -17,4 +17,14 @@ public class WaterManager : MonoBehaviour
         // Make the water level go down over time
         waterLevel -= Time.deltaTime * 1f; // Adjust the speed of water level decrease here
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // If we collide with a bottle, instantly bring waterlevel back to 100f
+        if (other.CompareTag("Bottle"))
+        {
+            waterLevel = 100f;
+            Destroy(other.gameObject); // Remove the bottle from the scene
+        }
+    }
 }
