@@ -17,6 +17,12 @@ public class PlayerOverheatLogic : MonoBehaviour
     [Header("Floating HUD Text")]
     public TextMeshPro outText;
 
+    public static PlayerOverheatLogic reference;
+
+    void Awake()
+    {
+        reference = this; // Set the static reference to this instance of the PlayerOverheatLogic
+    }
 
     void Update()
     {

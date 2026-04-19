@@ -4,6 +4,8 @@ using UnityEngine;
 public class WaterManager : MonoBehaviour
 {
 
+    public static WaterManager reference;
+
     public float waterLevel = 100f; // The current height of the water
 
 
@@ -12,9 +14,9 @@ public class WaterManager : MonoBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        reference = this; // Set the static reference to this instance of the WaterManager
     }
     void FixedUpdate()
     {

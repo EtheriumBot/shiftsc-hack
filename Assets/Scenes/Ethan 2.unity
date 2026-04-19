@@ -356,7 +356,6 @@ GameObject:
   m_Component:
   - component: {fileID: 330585546}
   - component: {fileID: 330585545}
-  - component: {fileID: 330585549}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
@@ -504,25 +503,6 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
---- !u!114 &330585549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cccb2f75ec2967a4eaaadfcb18fc7a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerOverheatLogic
-  targetObject: {fileID: 20721408}
-  overheatRate: 10
-  maxOverheat: 100
-  rayDistance: 800
-  overheat: 0
-  isObserved: 0
-  outText: {fileID: 1545413823}
 --- !u!1001 &346533473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1707,6 +1687,7 @@ GameObject:
   - component: {fileID: 1486985206}
   - component: {fileID: 1486985205}
   - component: {fileID: 1486985207}
+  - component: {fileID: 1486985208}
   m_Layer: 6
   m_Name: XR Rig
   m_TagString: Player
@@ -1789,6 +1770,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaterManager
   waterLevel: 100
   outText: {fileID: 1255660343}
+--- !u!114 &1486985208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486985203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccb2f75ec2967a4eaaadfcb18fc7a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerOverheatLogic
+  targetObject: {fileID: 20721408}
+  overheatRate: 5
+  maxOverheat: 100
+  rayDistance: 800
+  overheat: 0
+  isObserved: 0
+  outText: {fileID: 1545413823}
 --- !u!1 &1510115005
 GameObject:
   m_ObjectHideFlags: 0
