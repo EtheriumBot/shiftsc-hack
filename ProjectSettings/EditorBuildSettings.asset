@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Demo.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ethan.unity
     guid: 43b06a2174e51f74eb2375b35160c866
+  - enabled: 1
+    path: Assets/Scenes/Ethan 2.unity
+    guid: b760fc3664e44974285638de3e8e3e5e
   - enabled: 1
     path: Assets/Scenes/DeathScreen.unity
     guid: ea114c54f9c6551489fb795c9fb236e7

@@ -17,7 +17,8 @@ public class GodPlane : MonoBehaviour
 
     void Update()
     {
-        if (roundComplete) return;
+        GameObject player = GameObject.FindGameObjectWithTag(playerTag);
+        if (roundComplete) { if (player) player.transform.position = playerLandingSpot.position; return; }
 
         int current = GameObject.FindGameObjectsWithTag("Quests").Length;
         int previous = initialQuestCount - questsCollected;
