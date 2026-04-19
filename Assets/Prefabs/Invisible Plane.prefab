@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8869180864135721893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerSpawn
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5425637715827521441}
   - component: {fileID: 2839935986697157078}
   - component: {fileID: 2438055289640758458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Invisible Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
