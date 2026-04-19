@@ -3,31 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class DeathManager : MonoBehaviour
 {
-
     private WaterManager waterManager;
     private PlayerOverheatLogic playerOverheatLogic;
+    private bool isDead = false; // Prevents the scene from loading multiple times
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Get references to the WaterManager and PlayerOverheatLogic components
-        waterManager = WaterManager.reference; // Assuming WaterManager has a static reference
-        playerOverheatLogic = PlayerOverheatLogic.reference; // Assuming PlayerOverheatLogic has a static reference
-
-
-        // If the water level hits 0% or the overheat hits 100%, we die and go to the death screen
-        if (waterManager.waterLevel <= 0f || playerOverheatLogic.overheat >= 100f)
-        {
-            // Load the death screen scene here, for example:
-            SceneManager.LoadScene("Death Screen");
-            Debug.Log("Player has died! Load the death screen.");
-        }
-
+        // Keep the references in Start so we only find them once
+        waterManager = WaterManager.reference;
+        playerOverheatLogic = PlayerOverheatLogic.reference;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // If we haven't died yet, keep checking the stats
+        if (!isDead)
+        {
+            CheckDeathConditions();
+        }
+    }
+
+    void CheckDeathConditions()
+    {
+        // Check if water is empty OR heat is full
+        if (waterManager.waterLevel <= 0.01f || playerOverheatLogic.overheat >= 99.9f)
+        {
+            isDead = true; // Set to true so this block doesn't trigger again
+
+            Debug.Log("Player has died! Loading the death screen.");
+            SceneManager.LoadScene("DeathScreen");
+        }
     }
 }
