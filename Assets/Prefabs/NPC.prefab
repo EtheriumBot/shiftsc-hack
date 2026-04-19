@@ -34,7 +34,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.26, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2732749193272464282}
+  - {fileID: 2584464476135342644}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4469683606661146836
@@ -160,7 +160,7 @@ MonoBehaviour:
   movementSpeed: 3
   arrivalDistance: 0.5
   loopPath: 1
---- !u!1001 &7156731494911766365
+--- !u!1001 &7305015851252760307
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -169,12 +169,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 7856451877520161008}
     m_Modifications:
     - target: {fileID: 5097368384747437255, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097368384747437255, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1111112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097368384747437255, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097368384747437255, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5097368384747437255, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.64
+      value: -1.04
       objectReference: {fileID: 0}
     - target: {fileID: 5097368384747437255, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -208,6 +220,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5097368384747437255, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5617867961438905981, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
       propertyPath: m_Name
       value: Walking-2
@@ -217,8 +233,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
---- !u!4 &2732749193272464282 stripped
+--- !u!4 &2584464476135342644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5097368384747437255, guid: 7277c5279d5b14b969819de30c82bab3, type: 3}
-  m_PrefabInstance: {fileID: 7156731494911766365}
+  m_PrefabInstance: {fileID: 7305015851252760307}
   m_PrefabAsset: {fileID: 0}
