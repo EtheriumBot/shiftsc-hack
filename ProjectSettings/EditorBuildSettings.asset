@@ -8,12 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Demo.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ethan.unity
     guid: 43b06a2174e51f74eb2375b35160c866
+  - enabled: 1
+    path: Assets/Scenes/Ethan 2.unity
+    guid: b760fc3664e44974285638de3e8e3e5e
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: ea114c54f9c6551489fb795c9fb236e7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 9241134c7852779458f1d4611beb5cdb, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 145604106a74f364b8e0fc33cd098708, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 5095e07894bc72a44a18976fced539ec, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: e212d922438231a409ed184b0b9d57d6, type: 2}
   m_UseUCBPForAssetBundles: 0

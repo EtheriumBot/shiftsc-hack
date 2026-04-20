@@ -17,6 +17,8 @@ public class PlayerOverheatLogic : MonoBehaviour
     [Header("Floating HUD Text")]
     public TextMeshPro outText;
 
+    public LayerMask visibilityMask;
+
     public static PlayerOverheatLogic reference;
 
     void Awake()
@@ -43,6 +45,7 @@ public class PlayerOverheatLogic : MonoBehaviour
         if (targetObject == null)
         {
             isObserved = false;
+            Debug.Log("No target object");
             return;
         }
 
@@ -50,8 +53,22 @@ public class PlayerOverheatLogic : MonoBehaviour
         Vector3 direction = (targetObject.position - origin).normalized;
         float distance = Vector3.Distance(origin, targetObject.position);
 
+
         // If something blocks the ray before reaching the light, you're in shadow
-        isObserved = !Physics.Raycast(origin, direction, distance);
+        isObserved = !Physics.Raycast(origin, direction, distance, visibilityMask);
+        Debug.Log(isObserved);
+
+        RaycastHit hit;
+        if (Physics.Raycast(origin, direction, out hit, distance))
+        {
+            Debug.Log("Hit: " + hit.collider.name);
+            isObserved = false;
+        }
+        else
+        {
+            Debug.Log("Nothing hit");
+            isObserved = true;
+        }
     }
 
     private void OnDrawGizmos()
@@ -72,7 +89,7 @@ public class PlayerOverheatLogic : MonoBehaviour
         }
         else
         {
-            // Optional: Cool down when not looking
+            // Cool down when not looking
             overheat -= (overheatRate / 2) * Time.deltaTime;
         }
 

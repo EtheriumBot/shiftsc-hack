@@ -194,4 +194,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cc97ac2566f1c4291000aac4c3dc42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloatingHUD
+  offSet: 0.37
   scoreTarget: {fileID: 0}
